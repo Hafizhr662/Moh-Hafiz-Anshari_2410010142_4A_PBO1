@@ -34,14 +34,14 @@ daftarBuah[3] = new BuahPremium("Apel", 60000, 45, "jepang");
 ```
 
 3. **Atribut** adalah variabel atau karakteristik data yang dimiliki oleh class. Pada class Buah, terdapat atribut nama, harga, dan stok.
-```java
+```bash
 private String nama;
 private int harga;
 private int stok;;
 ```
 
 4. **Constructor** adalah method yang pertama kali dijalankan secara otomatis pada saat pembuatan/inisialisasi object.
-```java
+```bash
 public Buah(String nama, int harga, int stok) {
     this.nama = nama;
     this.harga = harga;
@@ -55,35 +55,35 @@ public BuahPremium(String nama, int harga, int stok, String asalNegara) {
 ```
 
 5. **Mutator** atau setter digunakan untukmengubah/memodifikasi nilai dari suatu atribut private. Di sini digunakan untuk mengurangi stok setelah dibeli.
-```java
+```bash
 public void setStok(int stok) {
     this.stok = stok;
 }
 ```
 
 6. **Accessor** atau getter digunakan untuk mengambil nilai dari suatu atribut private yang terbungkus.
-```java
+```bash
 public String getNama() { return nama; }
 public int getHarga() { return harga; }
 public int getStok() { return stok; }
 ```
 
 7. **Encapsulation** adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses via method. Pada class Buah, semua atribut dienkapsulasi demi keamanan data.
-```Java
+```bash
 private String nama;
 private int harga;
 private int stok;
 ```
 
 8. **Inheritance**(Pewarisan) adalah konsep di mana sebuah class anak mewarisi properti dan method dari class induk. Di sini BuahPremium menjadi class anak yang mewarisi class Buah.
-```java
+```baash
 public class BuahPremium extends Buah {
     ...
 }
 ```
 
 9. **Polymorphism** (Khususnya Method Overriding) adalah konsep di mana nama method yang sama pada class anak menimpa perilaku method class induknya. Pada kode ini, method tampilkanInfo() di-override agar cetakan buah premium menyertakan asal negaranya.
-```Java
+```bash
 @Override
 public void tampilkanInfo() {
     System.out.println(getNama() + " (" + asalNegara + ") \t| Rp" + getHarga() + "/kg \t| Stok: " + getStok() + " kg");
@@ -92,7 +92,7 @@ public void tampilkanInfo() {
 
 10. **Seleksi** adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi `if else` bertingkat untuk percabangan menu utama, validasi nomor buah, dan validasi kecukupan stok buah.
 
-```Java
+```bash
 if (menu == 1) {
     ...
 } else if (menu == 2) {
@@ -106,7 +106,7 @@ if (menu == 1) {
 
 11. **Perulangan** adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop `while` agar aplikasi terus berjalan, dan loop 'for' untuk menjelajahi array katalog buah.
 
-```Java
+```bash
 while (aplikasiJalan) {
     ...
 }
@@ -118,7 +118,7 @@ for (int i = 0; i < daftarBuah.length; i++) {
 
 12. **Input Output Sederhana** digunakan untukinteraksi dengan user. Digunakan class Scanner untuk input, dan System.out.println untuk output teks ke layar terminal.
 
-```Java
+```bash
 Scanner input = new Scanner(System.in);
 int menu = input.nextInt();
 System.out.println("Total Belanjaan Anda: Rp" + totalHarga);
@@ -126,13 +126,13 @@ System.out.println("Total Belanjaan Anda: Rp" + totalHarga);
 
 13. **Array** (Array of Object) adalah struktur data terurut untuk menampung banyak data sejenis. Di sini dipakai menampung 7 objek buah di satu variabel.
 
-```java
+```bash
 Buah[] daftarBuah = new Buah[7];
 ```
 
 14. **Error Handling** digunakan untuk mencegah aplikasi crash jika terjadi runtime error. Menggunakan blok try-catch untuk mengantisipasi kesalahan ketik user (misal input huruf pada angka).
 
-``
+```bash
 try {
     int menu = input.nextInt();
     ...
